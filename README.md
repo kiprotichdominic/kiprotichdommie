@@ -6,5 +6,6 @@
 
 - 🌱 I’m currently learning bash C#(ASP.net)
 - 👯 I'm open to talk about Python,Django and Angular.
+- 👯 I'm open to work, let me work in your next project.
 
 • [Email](mailto:kiprotichdominic102@gmail.com) • [LinkedIn](https://www.linkedin.com/in/kiprotichdominic/)
