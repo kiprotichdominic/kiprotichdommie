@@ -1,181 +1,226 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 <!-- Portfolio start -->
 <section class="section" id="portfolio" data-aos="fade-up">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-8">
-				<div class="section-title text-center">
-					<span class="text-color mb-0 text-uppercase letter-spacing text-sm"><i class="ti-minus"></i>works</span>
-					<h2 class="title">Portfolio</h2>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <span class="text-color mb-0 text-uppercase letter-spacing text-sm"
+            ><i class="ti-minus"></i>works</span
+          >
+          <h2 class="title">Portfolio</h2>
+        </div>
+      </div>
+    </div>
+  </div>
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="post_gallery owl-carousel owl-theme">
-				<div class="item">
-					<div class="portfolio-item position-relative">
-						<img src="{% static 'images/portfolio/web scraping.png' %}" alt="" class="img-fluid portfolio-images">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="post_gallery owl-carousel owl-theme">
+        {% for project in object_list %}
+        <div class="item">
+          <div class="portfolio-item position-relative">
+            <img
+              src="{{project.project_image.url}}"
+              alt=""
+              class="img-fluid portfolio-images"
+            />
 
-						<div class="portoflio-item-overlay">
-							<a target="_blank" href="https://github.com/kiprotichdominic/Web-Scrapping"><i class="ti-plus"></i></a>
-						</div>
-					</div>
-					<div class="text mt-3">
-						<h4 class="mb-1 text-capitalize">Web Scrapping</h4>
-						<p class="text-uppercase letter-spacing text-sm">Web scrapping scripts using python.</p>
-					</div>
-				</div>
-				<div class="item">
-					<div class="portfolio-item position-relative">
-						<img src="{% static 'images/portfolio/neigbourhood.jpg' %}" alt="" class="img-fluid portfolio-images">
-
-						<div class="portoflio-item-overlay">
-							<a target="_blank" href="https://securezone1.herokuapp.com/"><i class="ti-plus"></i></a>
-						</div>
-					</div>
-					<div class="text mt-3">
-						<h4 class="mb-1 text-capitalize">Neigbourhood Project</h4>
-						<p class="text-uppercase letter-spacing text-sm">wordpress</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+            <div class="portoflio-item-overlay">
+              <a target="_blank" href="{{project.link}}"
+                ><i class="ti-plus"></i
+              ></a>
+            </div>
+          </div>
+          <div class="text mt-3">
+            <h4 class="mb-1 text-capitalize">{{project.name}}</h4>
+            <p class="text-uppercase letter-spacing text-sm">
+              {{project.description}}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </section>
 <!-- Portfolio End -->
 
 <!-- Tetsimonial start -->
 <section class="section testomionial" data-aos="fade-up">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8">
-				<div class="section-title">
-					<span class="text-color mb-0 text-uppercase letter-spacing text-sm"> <i class="ti-minus mr-2"></i>testimonial</span>
-					<h1 class="title">What People Say About me</h1>
-				</div>
-			</div>
-		</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-title">
+          <span class="text-color mb-0 text-uppercase letter-spacing text-sm">
+            <i class="ti-minus mr-2"></i>testimonial</span
+          >
+          <h1 class="title">What People Say About me</h1>
+        </div>
+      </div>
+    </div>
 
-		<div class="row justify-content-center">
-			<div class="col-lg-10">
-				<div class="testimonial-slider">
-					<div class="testimonial-item position-relative">
-						<i class="ti-quote-left text-white-50"></i>
-						<div class="testimonial-content">
-							<p class="text-md mt-3">They do this through collaboration between our strategists, designers and technologists.They craft beautiful and unique digital experiences.Unlimited power and customization possibilities.Pixel perfect design & clear code delivered to you.</p>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="testimonial-slider">
+          <div class="testimonial-item position-relative">
+            <i class="ti-quote-left text-white-50"></i>
+            <div class="testimonial-content">
+              <p class="text-md mt-3">
+                They do this through collaboration between our strategists,
+                designers and technologists.They craft beautiful and unique
+                digital experiences.Unlimited power and customization
+                possibilities.Pixel perfect design & clear code delivered to
+                you.
+              </p>
 
-							<div class="media mt-5 align-items-center">
-								<img src="images/about/2.jpg" alt="" class="img-fluid  rounded-circle align-self-center mr-4">
-								<div class="media-body">
-									<h3 class="mb-0">John Smith</h3>
-									<span class="text-muted">Creative Designer</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-item position-relative">
-						<i class="ti-quote-left text-white-50"></i>
-						<div class="testimonial-content">
-							<p class="text-md mt-3">They do this through collaboration between our strategists, designers and technologists.They craft beautiful and unique digital experiences.Unlimited power and customization possibilities.Pixel perfect design & clear code delivered to you.</p>
+              <div class="media mt-5 align-items-center">
+                <img
+                  src="images/about/2.jpg"
+                  alt=""
+                  class="img-fluid rounded-circle align-self-center mr-4"
+                />
+                <div class="media-body">
+                  <h3 class="mb-0">John Smith</h3>
+                  <span class="text-muted">Creative Designer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item position-relative">
+            <i class="ti-quote-left text-white-50"></i>
+            <div class="testimonial-content">
+              <p class="text-md mt-3">
+                They do this through collaboration between our strategists,
+                designers and technologists.They craft beautiful and unique
+                digital experiences.Unlimited power and customization
+                possibilities.Pixel perfect design & clear code delivered to
+                you.
+              </p>
 
-							<div class="media mt-5 align-items-center">
-								<img src="images/about/3.jpg" alt="" class="img-fluid  rounded-circle align-self-center mr-4">
-								<div class="media-body">
-									<h3 class="mb-0">Smith Austin</h3>
-									<span class="text-muted">Developer</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-item position-relative">
-						<i class="ti-quote-left text-white-50"></i>
-						<div class="testimonial-content">
-							<p class="text-md mt-3">They do this through collaboration between our strategists, designers and technologists.They craft beautiful and unique digital experiences.Unlimited power and customization possibilities.Pixel perfect design & clear code delivered to you.</p>
+              <div class="media mt-5 align-items-center">
+                <img
+                  src="images/about/3.jpg"
+                  alt=""
+                  class="img-fluid rounded-circle align-self-center mr-4"
+                />
+                <div class="media-body">
+                  <h3 class="mb-0">Smith Austin</h3>
+                  <span class="text-muted">Developer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item position-relative">
+            <i class="ti-quote-left text-white-50"></i>
+            <div class="testimonial-content">
+              <p class="text-md mt-3">
+                They do this through collaboration between our strategists,
+                designers and technologists.They craft beautiful and unique
+                digital experiences.Unlimited power and customization
+                possibilities.Pixel perfect design & clear code delivered to
+                you.
+              </p>
 
-							<div class="media mt-5 align-items-center">
-								<img src="images/about/3.jpg" alt="" class="img-fluid  rounded-circle align-self-center mr-4">
-								<div class="media-body">
-									<h3 class="mb-0">Mike jack</h3>
-									<span class="text-muted">Marketer</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>	
-		</div>
-	</div>
+              <div class="media mt-5 align-items-center">
+                <img
+                  src="images/about/3.jpg"
+                  alt=""
+                  class="img-fluid rounded-circle align-self-center mr-4"
+                />
+                <div class="media-body">
+                  <h3 class="mb-0">Mike jack</h3>
+                  <span class="text-muted">Marketer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- Tetsimonial End -->
 
 <!-- Blog start -->
 <section class="section border-top-1" id="blog" data-aos="fade-up">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-8">
-				<div class="section-title text-center">
-					<span class="text-color mb-0 text-uppercase letter-spacing text-sm"> <i class="ti-minus mr-2"></i>blog news</span>
-					<h1 class="title">Latest Article</h1>
-				</div>
-			</div>
-		</div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <span class="text-color mb-0 text-uppercase letter-spacing text-sm">
+            <i class="ti-minus mr-2"></i>blog news</span
+          >
+          <h1 class="title">Latest Article</h1>
+        </div>
+      </div>
+    </div>
 
-		<div class="row">
-			<div class="col-lg-4 col-md-6">
-				<div class="position-relative blog-item mb-5 mb-lg-0">
-					<img src="images/blog/img1.jpg" alt="blog-1" class="img-fluid">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="position-relative blog-item mb-5 mb-lg-0">
+          <img src="images/blog/img1.jpg" alt="blog-1" class="img-fluid" />
 
-					<div class="blog-item-meta mb-3">
-						<span><i class="ti-user mr-2"></i>by Admin</span>
-						<span class="text-muted mx-2"> | </span>
-						<span class="text-white-50">Photography</span>
-					</div>
+          <div class="blog-item-meta mb-3">
+            <span><i class="ti-user mr-2"></i>by Admin</span>
+            <span class="text-muted mx-2"> | </span>
+            <span class="text-white-50">Photography</span>
+          </div>
 
-					<div class="pl-4">
-						<a href="blog-single.html"><h3 class="mb-4 ">20 Best Startup Ideas for Designers</h3></a>
+          <div class="pl-4">
+            <a href="blog-single.html"
+              ><h3 class="mb-4">20 Best Startup Ideas for Designers</h3></a
+            >
 
-						<a href="blog-single.html" class="learn-more text-uppercase text-sm"><i class="ti-arrow-right mr-2"></i>Learn more</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="position-relative blog-item mb-5 mb-lg-0">
-					<img src="images/blog/img3.jpg" alt="blog-1" class="img-fluid">
+            <a href="blog-single.html" class="learn-more text-uppercase text-sm"
+              ><i class="ti-arrow-right mr-2"></i>Learn more</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="position-relative blog-item mb-5 mb-lg-0">
+          <img src="images/blog/img3.jpg" alt="blog-1" class="img-fluid" />
 
-					<div class="blog-item-meta mb-3">
-						<span><i class="ti-user mr-2"></i>by Admin</span>
-						<span class="text-muted mx-2"> | </span>
-						<span class="text-white-50">Branding</span>
-					</div>
-					<div class="pl-4">
-						<a href="blog-single.html"><h3 class="mb-4">How to Incorporate Branding into Your Event</h3></a>
+          <div class="blog-item-meta mb-3">
+            <span><i class="ti-user mr-2"></i>by Admin</span>
+            <span class="text-muted mx-2"> | </span>
+            <span class="text-white-50">Branding</span>
+          </div>
+          <div class="pl-4">
+            <a href="blog-single.html"
+              ><h3 class="mb-4">
+                How to Incorporate Branding into Your Event
+              </h3></a
+            >
 
-						<a href="blog-single.html" class="learn-more text-uppercase text-sm"><i class="ti-arrow-right mr-2 show"></i>Learn more</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="position-relative blog-item mb-5 mb-lg-0">
-					<img src="images/blog/img1.jpg" alt="blog-1" class="img-fluid">
+            <a href="blog-single.html" class="learn-more text-uppercase text-sm"
+              ><i class="ti-arrow-right mr-2 show"></i>Learn more</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="position-relative blog-item mb-5 mb-lg-0">
+          <img src="images/blog/img1.jpg" alt="blog-1" class="img-fluid" />
 
-					<div class="blog-item-meta mb-3">
-						<span><i class="ti-user mr-2"></i>by Admin</span>
-						<span class="text-muted mx-2"> | </span>
-						<span class="text-white-50">Marketing</span>
-					</div>
-					<div class="pl-4">
-						<a href="blog-single.html"><h3 class="mb-4 ">The Value of Video in Content Marketing</h3></a>
-						<a href="blog-single.html" class="learn-more text-uppercase text-sm"><i class="ti-arrow-right mr-2"></i>Learn more</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+          <div class="blog-item-meta mb-3">
+            <span><i class="ti-user mr-2"></i>by Admin</span>
+            <span class="text-muted mx-2"> | </span>
+            <span class="text-white-50">Marketing</span>
+          </div>
+          <div class="pl-4">
+            <a href="blog-single.html"
+              ><h3 class="mb-4">The Value of Video in Content Marketing</h3></a
+            >
+            <a href="blog-single.html" class="learn-more text-uppercase text-sm"
+              ><i class="ti-arrow-right mr-2"></i>Learn more</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- Blog End -->
 {% endblock content %}
