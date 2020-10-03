@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <!-- Portfolio start -->
 <section class="section" id="portfolio" data-aos="fade-up">
@@ -18,79 +19,27 @@
 			<div class="post_gallery owl-carousel owl-theme">
 				<div class="item">
 					<div class="portfolio-item position-relative">
-						<img src="images/portfolio/3.jpg" alt="" class="img-fluid">
+						<img src="{% static 'images/portfolio/web scraping.png' %}" alt="" class="img-fluid portfolio-images">
 
 						<div class="portoflio-item-overlay">
-							<a href="portfolio-single.html"><i class="ti-plus"></i></a>
+							<a target="_blank" href="https://github.com/kiprotichdominic/Web-Scrapping"><i class="ti-plus"></i></a>
 						</div>
 					</div>
 					<div class="text mt-3">
-						<h4 class="mb-1 text-capitalize">Web development</h4>
-						<p class="text-uppercase letter-spacing text-sm">wordpress</p>
+						<h4 class="mb-1 text-capitalize">Web Scrapping</h4>
+						<p class="text-uppercase letter-spacing text-sm">Web scrapping scripts using python.</p>
 					</div>
 				</div>
 				<div class="item">
 					<div class="portfolio-item position-relative">
-						<img src="images/portfolio/4.jpg" alt="" class="img-fluid">
+						<img src="{% static 'images/portfolio/neigbourhood.jpg' %}" alt="" class="img-fluid portfolio-images">
 
 						<div class="portoflio-item-overlay">
-							<a href="portfolio-single.html"><i class="ti-plus"></i></a>
+							<a target="_blank" href="https://securezone1.herokuapp.com/"><i class="ti-plus"></i></a>
 						</div>
 					</div>
 					<div class="text mt-3">
-						<h4 class="mb-1 text-capitalize">Web development</h4>
-						<p class="text-uppercase letter-spacing text-sm">wordpress</p>
-					</div>
-				</div>
-				<div class="item">
-					<div class="portfolio-item position-relative">
-						<img src="images/portfolio/5.jpg" alt="" class="img-fluid">
-
-						<div class="portoflio-item-overlay">
-							<a href="portfolio-single.html"><i class="ti-plus"></i></a>
-						</div>
-					</div>
-					<div class="text mt-3">
-						<h4 class="mb-1 text-capitalize">Web development</h4>
-						<p class="text-uppercase letter-spacing text-sm">wordpress</p>
-					</div>
-				</div>
-				<div class="item">
-					<div class="portfolio-item position-relative">
-						<img src="images/portfolio/6.jpg" alt="" class="img-fluid">
-
-						<div class="portoflio-item-overlay">
-							<a href="portfolio-single.html"><i class="ti-plus"></i></a>
-						</div>
-					</div>
-					<div class="text mt-3">
-						<h4 class="mb-1 text-capitalize">Web development</h4>
-						<p class="text-uppercase letter-spacing text-sm">wordpress</p>
-					</div>
-				</div>
-				<div class="item">
-					<div class="portfolio-item position-relative">
-						<img src="images/portfolio/1.jpg" alt="" class="img-fluid">
-
-						<div class="portoflio-item-overlay">
-							<a href="portfolio-single.html"><i class="ti-plus"></i></a>
-						</div>
-					</div>
-					<div class="text mt-3">
-						<h4 class="mb-1 text-capitalize">Web development</h4>
-						<p class="text-uppercase letter-spacing text-sm">wordpress</p>
-					</div>
-				</div>
-				<div class="item">
-					<div class="portfolio-item position-relative">
-						<img src="images/portfolio/2.jpg" alt="" class="img-fluid">
-
-						<div class="portoflio-item-overlay">
-							<a href="portfolio-single.html"><i class="ti-plus"></i></a>
-						</div>
-					</div>
-					<div class="text mt-3">
-						<h4 class="mb-1 text-capitalize">Web development</h4>
+						<h4 class="mb-1 text-capitalize">Neigbourhood Project</h4>
 						<p class="text-uppercase letter-spacing text-sm">wordpress</p>
 					</div>
 				</div>

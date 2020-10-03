@@ -743,5 +743,11 @@ a:hover, a:focus {
     right: -6px;
   }
 }
+/*Custom CSS*/
+.portfolio-images{
+    width: 200px; /* You can set the dimensions to whatever you want */
+    height: 200px;
+    object-fit: cover;
+}
 
 /*# sourceMappingURL=maps/style.css.map */
