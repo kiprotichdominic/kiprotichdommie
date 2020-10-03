@@ -50,3 +50,13 @@ class Testimonial(models.Model):
             output_size = (300, 300)
             img.thumbnail(output_size)
             img.save(self.image.path)
+
+
+class ContactMe(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=254)
+    subject = models.CharField(max_length=250)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.name
