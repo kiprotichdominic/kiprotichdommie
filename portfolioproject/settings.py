@@ -25,7 +25,8 @@ SECRET_KEY = '#zc-vtx%utda&kr#8#q9ipe3_(_ta-r5qwt&x!n^5cd&und*^5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1','kiprotichdommie.me','dommie.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1',
+                 'kiprotichdommie.me', 'dommie.herokuapp.com']
 
 
 # Application definition
@@ -40,7 +41,7 @@ INSTALLED_APPS = [
     # 3rd Party Apps
 
     # Local Apps
-    'users.apps.UsersConfig', 
+    'users.apps.UsersConfig',
     'landingpage.apps.LandingpageConfig'
 ]
 
@@ -60,7 +61,7 @@ ROOT_URLCONF = 'portfolioproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -91,8 +92,8 @@ DATABASES = {
         'NAME': 'portfolio',
         'USER': 'postgres',
         'PASSWORD': '123456@#',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
@@ -136,13 +137,13 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'static')
+    os.path.join(BASE_DIR, 'static')
 ]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-AUTH_USER_MODEL = 'users.CustomUser' 
+AUTH_USER_MODEL = 'users.CustomUser'
 
 DEFAULT_FROM_EMAIL = 'kiprotich.korir.dominic@gmail.com'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
