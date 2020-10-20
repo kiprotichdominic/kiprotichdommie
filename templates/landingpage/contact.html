@@ -13,15 +13,10 @@
 
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <form
-          class="contact__form form-row contact-form"
-          method="post"
-          action="#"
-          id="contactForm"
-        >
+        <form class="contact__form form-row contact-form" method="post" action="#" id="contactForm">
         {% csrf_token %}
           <div class="row">
-            <div class="col-12">
+            <div class="col-12" id="success-message">
               <div
                 class="alert alert-success contact__msg"
                 style="display: none"
@@ -84,5 +79,4 @@
       </div>
     </div>
   </div>
-</section>
 </section>

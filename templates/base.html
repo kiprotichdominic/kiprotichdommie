@@ -269,7 +269,88 @@
 {% block content %}
 {% endblock content %}
 <!-- Contact start -->
-{% include "landingpage/contact.html" %}
+<section class="section" id="contact" data-aos="fade-up">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <span class="text-color mb-0 text-uppercase letter-spacing text-sm">
+            <i class="ti-minus mr-2"></i>Contact</span
+          >
+          <h1 class="title">Get in Touch</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <form class="contact__form form-row contact-form" method="post" action="#" id="contactForm" onsubmit="event.preventDefault()">
+        {% csrf_token %}
+          <div class="row">
+            <div class="col-12" id="success-message">
+              <div
+                class="alert alert-success contact__msg"
+                style="display: none"
+                role="alert"
+              >
+                Your message was sent successfully.
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-lg-6 mb-5">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-control bg-transparent"
+              placeholder="Your Name"
+            />
+          </div>
+          <div class="form-group col-lg-6 mb-5">
+            <input
+              type="text"
+              name="email"
+              id="email"
+              class="form-control bg-transparent"
+              placeholder="Your Email"
+            />
+          </div>
+          <div class="form-group col-lg-12 mb-5">
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              class="form-control bg-transparent"
+              placeholder="Your Subject"
+            />
+          </div>
+
+          <div class="form-group col-lg-12 mb-5">
+            <textarea
+              id="message"
+              name="message"
+              cols="30"
+              rows="6"
+              class="form-control bg-transparent"
+              placeholder="Your Message"
+            ></textarea>
+
+            <div class="text-center">
+              <input
+                class="btn btn-main text-white mt-5"
+                id="submit"
+                name="submit"
+                type="submit"
+                class="btn btn-hero"
+                value="Send Message"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- Contact End -->
 
 <!-- Footer start -->
@@ -322,7 +403,16 @@
     
     <script src="{% static 'js/script.js' %}"></script>
     <script src="{% static 'js/ajax-contact.html' %}"></script>
+    <script>
+        $(function() {
+            // Get the form.
+            var form = $('#contactForm');
+            // Get the messages div.
+            var formMessages = $('#form-messages');
 
+            // TODO: The rest of the code will go here...
+        });
+    </script>
   </body>
 </html>
    

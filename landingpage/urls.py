@@ -5,5 +5,5 @@ from . import views
 
 urlpatterns = [
     path('', views.LandingPage, name='home'),
-    path('', views.contactView, name='contact'),
+    # path('', views.contactView, name='contact'),
 ]
